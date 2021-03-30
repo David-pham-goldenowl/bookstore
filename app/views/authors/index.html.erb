@@ -1,0 +1,9 @@
+<table id="authors">
+  <%= render partial: 'author', collection: @authors, as: :author %>
+</table>
+
+<%= form_for @author, remote: true, authenticity_token: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Submit" %>
+<% end %>

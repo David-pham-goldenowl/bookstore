@@ -1,0 +1,8 @@
+<tr>
+  <td>
+    <%= author.name %>
+  </td>
+  <td>
+    <%= button_to "delete", author_path(author.id), method: :delete, remote: true %>
+  </td>
+</tr>

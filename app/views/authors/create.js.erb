@@ -1,0 +1,2 @@
+var table = document.getElementById("authors");
+table.insertAdjacentHTML("beforeend", "<%= j render partial: 'author', locals: { author: @author} %>");
