@@ -3,6 +3,6 @@
     <%= author.name %>
   </td>
   <td>
-    <%= button_to "delete", author_path(author.id), method: :delete, remote: true %>
+    <%= link_to "delete", author_path(author), method: :delete, remote: true %>
   </td>
 </tr>

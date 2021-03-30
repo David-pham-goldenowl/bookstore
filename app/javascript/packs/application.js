@@ -7,7 +7,16 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "./deleteAuthor"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+window.addEventListener("load", () => {
+  const table = document.querySelector("table");
+  table.addEventListener("ajax:success", (event) => {
+    event.target.parentNode.parentNode.remove();
+  });
+});

@@ -30,7 +30,7 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       if @author.destroy
         format.html { redirect_to authors_path, notice: "Success!" }
-        format.js
+        format.js { {id: @author.id} }
       else
         format.html { redirect_to authors_path, notice: "Failed!" }
         format.js

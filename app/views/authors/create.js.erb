@@ -1,2 +1,8 @@
-var table = document.getElementById("authors");
-table.insertAdjacentHTML("beforeend", "<%= j render partial: 'author', locals: { author: @author} %>");
+var table = document.querySelector("table");
+
+var row = "<%= j render partial: 'author', locals: { author: @author } %>";
+
+table.insertAdjacentHTML("beforeend", row);
+
+var input = document.querySelector("#author_name");
+input.value = '';
